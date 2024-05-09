@@ -8,6 +8,11 @@
       <h3>Today's High: <%= @weather.max_temperature %>°F</h3>
       <h3>Today's Low: <%= @weather.min_temperature %>°F</h3>
     </div>
+    <% if @weather.cached? %>
+      <div class="cache-notice">
+        This is a cached weather report and may be slightly out of date.
+      </div>
+    <% end %>
   </div>
 <% else %>
   <div class="weather-info">
