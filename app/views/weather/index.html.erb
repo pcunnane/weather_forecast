@@ -1,0 +1,14 @@
+<h1>Weather Forecaster</h1>
+
+<%= form_with(url: weather_show_path, method: :post, local: true) do |form| %>
+  <div>
+    <%= form.label :address, "Enter your address:" %>
+    <%= text_field_tag :address, nil, id: 'address-input', autocomplete: 'off' %>
+  </div>
+  
+  <div>
+    <%= form.hidden_field :zipcode, id: 'zipcode-field' %>
+  </div>
+
+  <%= form.submit "Check Weather" %>
+<% end %>
