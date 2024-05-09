@@ -1,3 +1,18 @@
-<h1>Current Weather for <%= @address %></h1>
+<% if @weather %>
+  <div class="weather-info">
+    <h1>Current Weather for <%= @address %></h1>
+    <div class="temperature">
+      <h2>Current Temperature: <%= @weather.temperature %>°F</h2>
+    </div>
+    <div class="temperature-range">
+      <h3>Today's High: <%= @weather.max_temperature %>°F</h3>
+      <h3>Today's Low: <%= @weather.min_temperature %>°F</h3>
+    </div>
+  </div>
+<% else %>
+  <div class="weather-info">
+    <h1><%= @error %></h1>
+  </div>
+<% end %>
 
-Temperature: <%= @weather.temperature %>
+<%= link_to 'Lookup weather for another location', :back %>
