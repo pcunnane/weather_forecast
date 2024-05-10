@@ -15,6 +15,11 @@ class WeatherController < ApplicationController
     else
       render_error
     end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   rescue WeatherService::Client::Error
     render_error
   end
