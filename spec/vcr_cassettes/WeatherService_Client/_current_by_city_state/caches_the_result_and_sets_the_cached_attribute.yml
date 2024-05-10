@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<API_KEY>&q=South%20Lake%20Tahoe,CA,US&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json
+      User-Agent:
+      - OpenWeather Ruby Client/0.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 10 May 2024 16:23:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '476'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?q=south+lake+tahoe%2cca%2cus&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-119.9844,"lat":38.9332},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":51.66,"feels_like":48.54,"temp_min":46.96,"temp_max":55.62,"pressure":1020,"humidity":43},"visibility":10000,"wind":{"speed":5.75,"deg":70},"clouds":{"all":0},"dt":1715358232,"sys":{"type":1,"id":6086,"country":"US","sunrise":1715345489,"sunset":1715396474},"timezone":-25200,"id":5397664,"name":"South
+        Lake Tahoe","cod":200}'
+  recorded_at: Fri, 10 May 2024 16:23:52 GMT
+recorded_with: VCR 6.0.0
