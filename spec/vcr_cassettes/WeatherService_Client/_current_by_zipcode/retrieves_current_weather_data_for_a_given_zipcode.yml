@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<API_KEY>&units=imperial&zip=93907,US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json
+      User-Agent:
+      - OpenWeather Ruby Client/0.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 10 May 2024 00:33:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '463'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?units=imperial&zip=93907%2cus"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-121.6703,"lat":36.7563},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":67.46,"feels_like":66.69,"temp_min":56.14,"temp_max":79.25,"pressure":1013,"humidity":59},"visibility":10000,"wind":{"speed":18.41,"deg":340},"clouds":{"all":0},"dt":1715301093,"sys":{"type":1,"id":5885,"country":"US","sunrise":1715259836,"sunset":1715310138},"timezone":-25200,"id":0,"name":"Salinas","cod":200}'
+  recorded_at: Fri, 10 May 2024 00:33:44 GMT
+recorded_with: VCR 6.0.0
