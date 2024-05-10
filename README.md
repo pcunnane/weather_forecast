@@ -26,7 +26,7 @@ The external weather service for retrieving weather data is the [Open Weather AP
   max_temperature: 60.6
   cached: true
 
-  # In the case that the service is unavailable, a internal exception is raised.
+  # In the case that the service is unavailable, an internal exception is raised.
   WeatherService::Client::Error
 
 ```
